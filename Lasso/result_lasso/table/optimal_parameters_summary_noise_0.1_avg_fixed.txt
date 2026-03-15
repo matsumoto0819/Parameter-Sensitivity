@@ -1,0 +1,21 @@
+Lasso Denoising Results Summary (Averaged over 100 trials)
+======================================================================
+
+Signal: N=100, M=50, s=5, noise_level=0.1
+Note: x0 and A were fixed across all trials.
+
+--- QP Average Optimal Parameters ---
+Based on Min MSE   : 0.704092
+Based on Max PSNR  : 0.704092
+Based on Max SSIM  : 3.976751
+
+--- LS Average Optimal Parameters ---
+Based on Min MSE   : 4.851510
+Based on Max PSNR  : 4.851510
+Based on Max SSIM  : 4.474603
+
+--- BP Average Optimal Parameters ---
+Based on Min MSE   : 0.521820
+Based on Max PSNR  : 0.521820
+Based on Max SSIM  : 1.377177
+

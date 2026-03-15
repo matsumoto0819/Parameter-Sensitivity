@@ -1,0 +1,21 @@
+ADMM TV Denoising Summary for cameraman.png
+======================================================================
+
+Original TV: 2582.30
+Noisy TV:    4418.27
+
+--- QP Optimal Parameters ---
+Based on Min MSE   : 0.023269
+Based on Max PSNR  : 0.023269
+Based on Max SSIM  : 0.042975
+
+--- LS Optimal Parameters ---
+Based on Min MSE   : 3235.709947
+Based on Max PSNR  : 3235.709947
+Based on Max SSIM  : 1854.307122
+
+--- BP Optimal Parameters ---
+Based on Min MSE   : 9.271536
+Based on Max PSNR  : 9.271536
+Based on Max SSIM  : 9.271536
+

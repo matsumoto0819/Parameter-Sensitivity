@@ -1,0 +1,20 @@
+Lasso Denoising Results Summary
+==================================================
+
+Signal: N=100, M=50, s=5, noise_level=0.1
+
+--- QP Optimal Parameters ---
+Based on Min MSE   : 0.740513
+Based on Max PSNR  : 0.740513
+Based on Max SSIM  : 3.878469
+
+--- LS Optimal Parameters ---
+Based on Min MSE   : 4.988468
+Based on Max PSNR  : 4.988468
+Based on Max SSIM  : 4.604397
+
+--- BP Optimal Parameters ---
+Based on Min MSE   : 0.541407
+Based on Max PSNR  : 0.541407
+Based on Max SSIM  : 1.371320
+

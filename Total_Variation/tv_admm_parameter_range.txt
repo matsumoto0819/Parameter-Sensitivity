@@ -1,0 +1,102 @@
+############## Denoiseing #################
+################### ノイズレベル 0.1 ################
+    # 各手法のパラメータ範囲を指定(重要)
+    # No constraint : λ
+    start_lambda = 0.001
+    end_lambda = 1
+    LAM_array = np.logspace(np.log10(start_lambda), np.log10(end_lambda), num=1000)
+
+    # TV constraint : τ
+    tv_orig = np.sum(np.sqrt(np.gradient(orig_img, axis=1)**2 + np.gradient(orig_img, axis=0)**2))
+    start_tau = 200
+    end_tau = 25000
+    TAU_array = np.logspace(np.log10(start_tau), np.log10(end_tau), num=1000)
+
+    # Data fidelity constraint : σ
+    sigma_noise = np.linalg.norm(noise)
+    start_sigma = 2
+    end_sigma = 300
+    SIGMA_array = np.logspace(np.log10(start_sigma), np.log10(end_sigma), num=1000)
+  
+################### ノイズレベル 0.05 ################    
+    # 各手法のパラメータ範囲を指定(重要)
+    # No constraint : λ
+    start_lambda = 0.002
+    end_lambda = 0.5
+    LAM_array = np.logspace(np.log10(start_lambda), np.log10(end_lambda), num=1000)
+
+    # TV constraint : τ
+    tv_orig = np.sum(np.sqrt(np.gradient(orig_img, axis=1)**2 + np.gradient(orig_img, axis=0)**2))
+    start_tau = 200
+    end_tau = 30000
+    TAU_array = np.logspace(np.log10(start_tau), np.log10(end_tau), num=1000)
+
+    # Data fidelity constraint : σ
+    sigma_noise = np.linalg.norm(noise)
+    start_sigma = 1
+    end_sigma = 150
+    SIGMA_array = np.logspace(np.log10(start_sigma), np.log10(end_sigma), num=1000)
+
+################### ノイズレベル 0.01 ################    
+    # 各手法のパラメータ範囲を指定(重要)
+    # No constraint : λ
+    start_lambda = 0.0002
+    end_lambda = 0.05
+    LAM_array = np.logspace(np.log10(start_lambda), np.log10(end_lambda), num=1000)
+
+    # TV constraint : τ
+    tv_orig = np.sum(np.sqrt(np.gradient(orig_img, axis=1)**2 + np.gradient(orig_img, axis=0)**2))
+    start_tau = 200
+    end_tau = 35000
+    TAU_array = np.logspace(np.log10(start_tau), np.log10(end_tau), num=1000)
+
+    # Data fidelity constraint : σ
+    sigma_noise = np.linalg.norm(noise)
+    start_sigma = 0.1
+    end_sigma = 30
+    SIGMA_array = np.logspace(np.log10(start_sigma), np.log10(end_sigma), num=1000)
+    
+    
+################### ノイズレベル 0.001 ################
+    # 各手法のパラメータ範囲を指定(重要)
+    # No constraint : QP_λ
+    start_lambda = 0.0000005
+    end_lambda = 0.00025
+    LAM_array = np.logspace(np.log10(start_lambda), np.log10(end_lambda), num=1000)
+
+    # TV constraint : LS_τ
+    tv_orig = np.sum(np.sqrt(np.gradient(orig_img, axis=1)**2 + np.gradient(orig_img, axis=0)**2))
+    start_tau = 300
+    end_tau = 40000
+    TAU_array = np.logspace(np.log10(start_tau), np.log10(end_tau), num=1000)
+
+    # Data fidelity constraint : BP_σ
+    sigma_noise = np.linalg.norm(noise)
+    start_sigma = 0.00025
+    end_sigma = 0.06
+    SIGMA_array = np.logspace(np.log10(start_sigma), np.log10(end_sigma), num=1000)
+    
+
+
+############## Inpainting #################
+################### ノイズレベル 0.01 ################   
+    # 各手法のパラメータ範囲を指定(重要)
+    # No constraint (QP) : λ
+    start_lambda = 0.0002
+    end_lambda = 0.02
+    LAM_array = np.logspace(np.log10(start_lambda), np.log10(end_lambda), num=1000)
+
+    # TV constraint (LS) : τ
+    tv_orig = np.sum(np.sqrt(np.gradient(orig_img, axis=1)**2 + np.gradient(orig_img, axis=0)**2))
+    start_tau = 20
+    end_tau = 3000
+    TAU_array = np.logspace(np.log10(start_tau), np.log10(end_tau), num=1000)
+
+    # Data fidelity constraint (BP) : σ
+    # sigmaの基準値をマスクされた領域のノイズノルムにする
+    sigma_noise = np.linalg.norm(mask * noise)
+    start_sigma = 0.15
+    end_sigma = 20
+    SIGMA_array = np.logspace(np.log10(start_sigma), np.log10(end_sigma), num=1000)
+
+
